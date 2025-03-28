@@ -5,7 +5,6 @@ section.hero {
   margin-inline: auto;
 
   display: flex;
-  /* flex-direction: column-reverse; */
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -221,5 +220,118 @@ section.hero {
 
   100% {
     transform: translateY(-16.25rem);
+  }
+}
+
+@media (width <= 61rem) {
+  section.hero {
+    flex-direction: column-reverse;
+    margin-inline: auto;
+  }
+}
+
+@media (width <= 47rem) {
+  section.hero {
+    flex-direction: column-reverse;
+    margin-inline: auto;
+
+    & h1 div {
+      height: 2.5rem;
+      vertical-align: top;
+    }
+  }
+
+  @keyframes slideUp {
+    /* radical static */
+    0%, 22% {
+      transform: translateY(0);
+    }
+  
+    /* divertida in */
+    23% {
+      transform: translateY(calc(-2.7rem - 10px));
+    }
+  
+    25% {
+      transform: translateY(calc(-2.7rem - 7px));
+    }
+  
+    27% {
+      transform: translateY(calc(-2.7rem - 3px));
+    }
+  
+    29% {
+      transform: translateY(calc(-2.7rem + 3px));
+    }
+  
+    /* diverida static */
+    33%, 55% {
+      transform: translateY(-2.7rem);
+    }
+  
+    /* saudavel in */
+    56% {
+      transform: translateY(calc(-5.4rem - 10px));
+    }
+  
+    58% {
+      transform: translateY(calc(-5.4rem - 7px));
+    }
+  
+    60% {
+      transform: translateY(calc(-5.4rem - 3px));
+    }
+  
+    62% {
+      transform: translateY(calc(-5.4rem + 3px));
+    }
+  
+    /* saudavel static */
+    66%, 88% {
+      transform: translateY(-5.4rem);
+    }
+  
+    /* radical in */
+    89% {
+      transform: translateY(calc(-8rem - 10px));
+    }
+  
+    91% {
+      transform: translateY(calc(-8rem - 7px));
+    }
+  
+    93% {
+      transform: translateY(calc(-8rem - 3px));
+    }
+  
+    95% {
+      transform: translateY(calc(-8rem + 3px));
+    }
+  
+  
+    100% {
+      transform: translateY(-8rem);
+    }
+  }
+}
+
+@media (width <= 37.5rem) {
+  section.hero {
+    & h1 {
+      max-width: 19.5rem;
+      margin-inline: auto;
+    }
+
+    & > div:nth-child(2) {
+      display: block;
+      width: 100%; 
+      max-width: 19.5rem;
+      height: 19.5rem;
+    }
+
+    & .buttons {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

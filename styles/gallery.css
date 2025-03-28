@@ -108,3 +108,13 @@ section.gallery {
     transform: translateY(100%);
   }
 }
+
+@media (width <= 34.5rem) {
+  section.gallery {
+    & .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  }
+}

@@ -48,3 +48,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media (width <= 47rem) {
+  h1 {
+    font-size: 2rem;
+  }
+}

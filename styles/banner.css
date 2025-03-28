@@ -37,3 +37,15 @@
     transform: translateX(-132px);
   }
 }
+
+@media (width <= 47rem) {
+  .banner {
+    padding-block: 1.5rem;
+  
+    & .scroller {
+      width: 100%;
+      overflow: hidden;
+      padding-block: .875rem;
+    }
+  }
+}
